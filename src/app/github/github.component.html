@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
         <div class="jumbotron ">
           <div class="text-center">
             <img src="/assets/iconfinder_Github_381376 (1).png" style="width:100px;height:100px;" alt="Detective github">
@@ -28,11 +28,13 @@
                 </div>
       
               </div>
-              <div *ngFor="let repo of repos" class="col-6">
-                <h4>Repositories</h4>
+            <div class="col-6">
+              <h4>Repositories</h4>
+              <div *ngFor="let repo of repos">
                 <p>Repo Name: {{repo.name}}</p>
                 <p>Description: {{repo.description}}</p>
               </div>
+            </div>
             </div>
           </div>
       
