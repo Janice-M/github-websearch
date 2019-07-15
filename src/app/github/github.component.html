@@ -27,6 +27,7 @@
           <div *ngIf="profile">
 
             <p>Name: {{profile.username}}</p>
+            <a href="{{profile.html_url}}" target="_blank" class="btn btn-outline-success btn-sm">View profile on github</a><hr>
             <img class="img-circle img-responsive" src="{{profile.avatar_url}}" width="150" height="auto" />
             <!-- <p>Username: {{profile.login}}</p> -->
             <p>Bio: {{profile.bio}}</p>
