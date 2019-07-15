@@ -14,7 +14,8 @@ export class ProfileService {
 
   constructor(private http: Http) {
     console.log("Service works.")
-    this.username = 'Janice-M';
+
+    this.username = "Janice-M";
   }
 
   getProfileInfo(){
