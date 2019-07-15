@@ -49,6 +49,8 @@
           <div *ngFor="let repo of repos">
             <p>Repo Name: {{repo.name}}</p>
             <p>Description: {{repo.description}}</p>
+
+            <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-outline-info pull-right">View this project on github</a>
           </div>
         </div>
       <!-- </div> -->
