@@ -1,54 +1,55 @@
 <div class="container-fluid">
-        <div class="jumbotron ">
-          <div class="text-center">
-            <img src="/assets/iconfinder_Github_381376 (1).png" style="width:100px;height:100px;" alt="Detective github">
+  <div class="jumbotron ">
+    <div class="text-center">
+      <img src="/assets/iconfinder_Github_381376 (1).png" style="width:100px;height:100px;" alt="Detective github">
+    </div>
+    <h2 class="text-center">Detective Github</h2>
+    <h3 class="text-center">Helping you find your nerd buds and their repos!</h3>
+    <br>
+    <!-- <app-github-form class=" col-5 text-center"></app-github-form> -->
+    <div>
+      <form class="search-form">
+        <div class="form-group">
+          <div>
+            <label for="userName"><b>User Name:</b></label>
+            <input [(ngModel)]="username" (keyup)="findProfile()" class="form-control" name="username"
+              placeholder="Enter Username" rows="2" required />
+            <small>Rafiki, enter a user name</small>
           </div>
-          <h2 class="text-center">Detective Github</h2>
-          <h3 class="text-center">Helping you find your nerd buds and their repos!</h3>
-          <br>
-          <!-- <app-github-form class=" col-5 text-center"></app-github-form> -->
-      <div>
-          <form class="search-form"> 
-              <div class="form-group">
-                <div>
-                  <label for="userName"><b>User Name:</b></label>
-                  <input [(ngModel)]="username" (keyup)="findProfile()" class="form-control"  name="username" placeholder="Enter Username" rows="2" required />
-                  <small>Rafiki, enter a user name</small>
-                </div>
-              </div>
-            </form>
-      
-      </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <h4>User Details</h4>
-                <div *ngIf="profile" class="details">
-                  <p>Name: {{profile.name}}</p>
-                  <img class="img-circle img-responsive" src="{{profile.avatar_url}}" width="150" height="auto" />
-                  <p>Username: {{profile.login}}</p>
-                  <p>Bio: {{profile.bio}}</p>
-                  <p>Hired?: {{profile.hireable}}</p>
-                  <p>Company: {{profile.company}}</p>
-                  <p>Blog: {{profile.blog}}</p>
-                  <p>Email: {{profile.email}}</p>
-                  <p>Followers: {{profile.followers}}</p>
-                  <p>Following: {{profile.following}}</p>
-                  
-                  <p>Location: {{profile.location}}</p>
-                </div>
-      
-              </div>
-            <div class="col-6">
-              <h4>Repositories</h4>
-              <div *ngFor="let repo of repos">
-                <p>Repo Name: {{repo.name}}</p>
-                <p>Description: {{repo.description}}</p>
-              </div>
-            </div>
-            </div>
+        </div>
+      </form>
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h4>User Details</h4>
+          <div *ngIf="profile" class="details">
+            <p>Name: {{profile.username}}</p>
+            <img class="img-circle img-responsive" src="{{profile.avatar_url}}" width="150" height="auto" />
+            <!-- <p>Username: {{profile.login}}</p> -->
+            <p>Bio: {{profile.bio}}</p>
+            <!-- <p>Hired?: {{profile.hireable}}</p> -->
+            <!-- <p>Company: {{profile.company}}</p> -->
+            <!-- <p>Blog: {{profile.blog}}</p> -->
+            <!-- <p>Email: {{profile.email}}</p> -->
+            <p>Followers: {{profile.followers}}</p>
+            <p>Following: {{profile.following}}</p>
+
+            <p>Location: {{profile.repos}}</p>
           </div>
-      
-      
+
+        </div>
+        <div class="col-6">
+          <h4>Repositories</h4>
+          <div *ngFor="let repo of repos">
+            <p>Repo Name: {{repo.name}}</p>
+            <p>Description: {{repo.description}}</p>
+          </div>
         </div>
       </div>
+    </div>
+
+
+  </div>
+</div>

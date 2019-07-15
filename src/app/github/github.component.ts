@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactory } from '@angular/core';
 import { ProfileService } from '../profile.service';
-import { User} from '../user';
-import { Repositories} from '../repositories';
+import { User } from '../user';
+import { Repositories } from '../repositories';
 
 @Component({
   selector: 'app-github',
@@ -10,35 +10,37 @@ import { Repositories} from '../repositories';
 })
 export class GithubComponent implements OnInit {
 
-  profile:User;
+  profile: User;
   repos: Repositories;
   username: string;
 
- constructor(private profileService: ProfileService) {
-
- this.profileService.updateProfile(this.username);
- this.profileService.getProfileInfo().subscribe(profile => {
-   console.log(profile);
-   this.profile = profile;
- });
-
- this.profileService.getProfileRepos().subscribe(repos => {
-   console.log(repos);
-     this.repos = repos;
-   })
-     }
-
-  findProfile(){
- }
+  constructor(private profileService: ProfileService) {
 
 
- ngOnInit() {
-  interface ApiResponse{
-  name: string;
-  login: string;
-  avatar_url: any;
-  html_url: string;
-  public_repos: string;
   }
-}
+
+  findProfile() {
+    this.profileService.updateProfile(this.username);
+    this.profileService.getProfileInfo().subscribe(profile => {
+      console.log(profile);
+      this.profile = profile;
+    });
+
+    this.profileService.getProfileRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    })
+  }
+
+
+  ngOnInit() {
+    interface ApiResponse {
+      avatar_url: any,
+       username:string,
+       bio:string,
+       repos:number,
+       followers:number,
+       following:number,
+    }
+  }
 }
