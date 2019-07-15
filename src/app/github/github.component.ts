@@ -13,6 +13,7 @@ export class GithubComponent implements OnInit {
   profile: User;
   repos: Repositories;
   username: string;
+  name = "Janice-M"; 
 
   constructor(private profileService: ProfileService) {
 

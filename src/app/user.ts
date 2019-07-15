@@ -7,8 +7,9 @@ export class User {
       public followers:number,
       public following:number,
       public html_url : string,
+      public name = "Janice-M",
       // public link: any,
-      // public date: Date
+      // public date: Dat
       ){}
   }
   
