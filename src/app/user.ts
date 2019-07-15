@@ -1,15 +1,13 @@
 export class User {
-    constructor(
-      public avatar_url: any,
-      public username:string,
-      public bio:string,
-      public repos:number,
-      public followers:number,
-      public following:number,
-      public html_url : string,
-      public name = "Janice-M",
-      // public link: any,
-      // public date: Dat
-      ){}
-  }
-  
+
+  avatar_url: any;
+  username: string;
+  bio: string;
+  repos: number;
+  followers: number;
+  following: number;
+  html_url: string;
+  // public link: any,
+  // public date: Dat
+
+}

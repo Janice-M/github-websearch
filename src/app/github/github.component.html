@@ -1,5 +1,5 @@
-<div class="container-fluid">
-  <div class="jumbotron">
+<div class="container">
+  <div class="jumbotron" >
     <div class="text-center">
       <img src="/assets/iconfinder_Github_381376 (1).png" style="width:100px;height:100px;" alt="Detective github">
     </div>
@@ -21,6 +21,7 @@
     <!-- </div> -->
     <!-- </div> -->
     <!-- <div class="container"> -->
+        
     <div class="row">
       <div class="col-6">
           <div *ngIf="profile">
@@ -32,7 +33,6 @@
           <img class="img-circle img-responsive" src="{{profile.avatar_url}}" width="150" height="auto" />
           <!-- <p>Username: {{profile.login}}</p> -->
           <p>Bio: {{profile.bio}}</p>
-          <a href="{profile.email}}"></a>
           <p>Followers: {{profile.followers}}</p>
           <p>Following: {{profile.following}}</p>
 
