@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile.service';
+import { User} from '../user';
+import { Repositories} from '../repositories';
 
 @Component({
   selector: 'app-github',
@@ -8,9 +10,9 @@ import { ProfileService } from '../profile.service';
 })
 export class GithubComponent implements OnInit {
 
-  profile:any[];
-  repos: any[];
-  username = "Janice-M";
+  profile:User;
+  repos: Repositories;
+  username: string;
 
  constructor(private profileService: ProfileService) {
 
@@ -30,7 +32,13 @@ export class GithubComponent implements OnInit {
  }
 
 
-
  ngOnInit() {
- }
+  interface ApiResponse{
+  name: string;
+  login: string;
+  avatar_url: any;
+  html_url: string;
+  public_repos: string;
+  }
+}
 }

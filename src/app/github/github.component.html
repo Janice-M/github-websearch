@@ -6,8 +6,19 @@
           <h2 class="text-center">Detective Github</h2>
           <h3 class="text-center">Helping you find your nerd buds and their repos!</h3>
           <br>
-          <app-github-form class="text-center"></app-github-form>
+          <!-- <app-github-form class=" col-5 text-center"></app-github-form> -->
+      <div>
+          <form class="search-form"> 
+              <div class="form-group">
+                <div>
+                  <label for="userName"><b>User Name:</b></label>
+                  <input [(ngModel)]="username" (keyup)="findProfile()" class="form-control"  name="username" placeholder="Enter Username" rows="2" required />
+                  <small>Rafiki, enter a user name</small>
+                </div>
+              </div>
+            </form>
       
+      </div>
           <div class="container">
             <div class="row">
               <div class="col-6">
