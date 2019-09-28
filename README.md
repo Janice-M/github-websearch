@@ -7,6 +7,9 @@
 
 This is a web application that allows you to search for a person's github profile and veiw their repos.
 
+An image of the web application being responsive.
+![screenshot](Screenshot.png)
+
 ## BDD
 
 BDD(Behavior Driven Development) focuses on users being able to search for github users via usernames and see their repos.
